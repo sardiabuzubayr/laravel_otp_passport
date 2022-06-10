@@ -11,7 +11,8 @@ You can see that in `App\Auth\Grants\OtpGrant`.
 In `.env` file add some variable below : <br/>
 CLIENT_ID=`<Your client id>`<br/>
 CLIENT_SECRET=`<Your client secret>`<br/>
-OTP_LIFETIME=120
+OTP_LIFETIME=120<br/>
+OTP_DIGITS=6
 
 ## STEP ##
 - Do all step to install <a href="https://laravel.com/docs/9.x/passport">`laravel passport`</a> in your project

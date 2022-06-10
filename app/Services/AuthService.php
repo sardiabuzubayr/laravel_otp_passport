@@ -27,7 +27,7 @@ class AuthService{
                     'message'=>"Failed, Otp has been created. Please wait until your old otp expired before create a new otp"
                 ];
             } else {
-                $otp = $this->generate_random(4);
+                $otp = $this->generate_random(env('OTP_DIGITS'));
                 Redis::set("otp_".$user->user_id, $otp, 'EX', env('OTP_LIFETIME'));
                 $response = [
                     'error_code'=>0,
